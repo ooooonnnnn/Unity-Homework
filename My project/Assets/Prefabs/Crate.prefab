@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1663606894012152057}
   - component: {fileID: 8395292092392495634}
   - component: {fileID: 3282483981315798898}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -116,7 +116,7 @@ GameObject:
   - component: {fileID: 7901661427052200962}
   - component: {fileID: 977830297763389206}
   - component: {fileID: 5498301847196887273}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Crate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -179,6 +179,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb41155af14aac8408cd4478f57d51c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  distanceOpenChute: 4
+  chuteDrag: 10
+  rigidbody: {fileID: 977830297763389206}
+  parachute: {fileID: 7315581949427081244}
 --- !u!1 &7315581949427081244
 GameObject:
   m_ObjectHideFlags: 0
@@ -191,7 +195,7 @@ GameObject:
   - component: {fileID: 2212631438547191768}
   - component: {fileID: 7386452613675557651}
   - component: {fileID: 7253909514848502351}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -213,6 +213,54 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &64253955
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 64253957}
+  - component: {fileID: 64253956}
+  m_Layer: 0
+  m_Name: crate spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &64253956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 64253955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2891e2696c8702d4b8c6dd9dd04ea609, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  period: 2
+  areaMargin: 5
+  spawnHeight: 10
+  cratePrefab: {fileID: 5876501393740800079, guid: bc99b974221910841945764820073d19, type: 3}
+--- !u!4 &64253957
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 64253955}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.80009, y: 2.8127182, z: 4.7706456}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &197512631
 GameObject:
   m_ObjectHideFlags: 0
@@ -331,9 +379,9 @@ GameObject:
   - component: {fileID: 687555856}
   - component: {fileID: 687555855}
   - component: {fileID: 687555854}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -579,7 +627,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 2.85
+  orthographic size: 5.75
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -604,7 +652,7 @@ Transform:
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
   m_LocalRotation: {x: 0.06724541, y: -0.12202129, z: 0.008286478, w: 0.9902122}
-  m_LocalPosition: {x: 3.99, y: 4.25, z: -16.47}
+  m_LocalPosition: {x: 3.99, y: 5.7, z: -16.47}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -618,3 +666,4 @@ SceneRoots:
   - {fileID: 705507995}
   - {fileID: 197512635}
   - {fileID: 35593563}
+  - {fileID: 64253957}

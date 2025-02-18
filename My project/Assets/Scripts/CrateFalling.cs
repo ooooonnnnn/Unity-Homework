@@ -1,18 +1,35 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.IO.LowLevel.Unsafe;
 using UnityEngine;
 
 public class CrateFalling : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private float distanceOpenChute;
+    private bool chuteOpen = false;
+    [SerializeField] private float chuteDrag;
+    [SerializeField] private Rigidbody rigidbody;
+    [SerializeField] private GameObject parachute; 
+
+    private void Update()
     {
-        
+        //check distance
+        if (!chuteOpen && Physics.Raycast(transform.position, Vector3.down, distanceOpenChute, 1))
+        {
+            print("yes");
+            chuteOpen = true;
+            parachute.SetActive(true);
+            rigidbody.drag = chuteDrag;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnCollisionEnter(Collision other)
     {
-        
+        if (other.gameObject.CompareTag("Player"))
+        {
+            print("package caught");
+        }
+        Destroy(gameObject);
     }
 }
